@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoyalTaste Restaurant</title>
+
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+  <nav>
+
+    <h2 class="logo">RoyalTaste</h2>
+
+    <ul id="navLinks">
+
+      <li class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+    <a href="{% url 'home' %}">Home</a>
+    </li>
+
+    <li class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+        <a href="{% url 'about' %}">About</a>
+    </li>
+
+    <li class="{% if request.resolver_match.url_name == 'menu' %}active{% endif %}">
+        <a href="{% url 'menu' %}">Menu</a>
+    </li>
+
+    <li class="{% if request.resolver_match.url_name == 'galary' %}active{% endif %}">
+        <a href="{% url 'galary' %}">Gallery</a>
+    </li>
+
+    <li class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+        <a href="{% url 'contact' %}">Contact</a>
+    </li>
+    </ul>
+
+    <div class="menu-btn" id="menuBtn">
+      ☰
+    </div>
+
+  </nav>
+
+</header>

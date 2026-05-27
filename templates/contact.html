@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <nav>
+
+    <h2 class="logo">RoyalTaste</h2>
+
+    <ul id="navLinks">
+
+      <li><a href="index.html">Home</a></li>
+
+      <li><a href="about.html">About</a></li>
+
+      <li><a href="menu.html">Menu</a></li>
+
+      <li><a href="gallery.html">Gallery</a></li>
+
+      <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+    <div class="menu-btn" id="menuBtn">
+      ☰
+    </div>
+
+  </nav>
+
+</header>
+
+<section class="page">
+
+  <h1>Contact Us</h1>
+
+  <form class="contact-form" method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="name" value="{{name1}}" placeholder="Your Name">
+
+    <input type="text" name="email" value="{{email1}}" placeholder="Your Email">
+
+    <textarea rows="6" name="message" placeholder="Your Message"></textarea>
+
+    <button type="submit">
+      Send Message
+    </button>
+
+  </form>
+
+  OUTPUT hai
+  <input type="text" value="{{output}}"/>
+
+
+</section>
+
+  
+
+
+
+
+{%endblock%}
+<script src="script.js"></script>
+
+</body>
+</html>
